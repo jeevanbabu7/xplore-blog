@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const techModel = mongoose.Schema({
+const blogSchema = new mongoose.Schema({
     title: {
         type: String
     },
@@ -10,4 +10,13 @@ const techModel = mongoose.Schema({
     image: {
         type: String
     }
-})
+}, { timestamps: true });
+
+const Blog = mongoose.model("Blog", blogSchema);
+export default Blog;
+
+const newsSchema = new mongoose.Schema({
+    content: String
+}, { timestamps: true });
+
+export const News = mongoose.model("News", newsSchema);

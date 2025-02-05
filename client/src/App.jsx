@@ -15,7 +15,12 @@ function App() {
   
   const [show, setShow] = useState(true);
 
-  const [time, setTime] = useState(new Date().toLocaleTimeString());
+  const [time, setTime] = useState(new Date().toLocaleTimeString("en-US", {
+    hour12: true,
+    hour: "2-digit",
+    minute: "2-digit"
+
+  }));
 
   useEffect(() => {
     const interval = setInterval(() => {
