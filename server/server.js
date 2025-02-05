@@ -66,7 +66,9 @@ app.get('/api/news/get', async (req, res) => {
     }
 });
 
-
+app.get('/', (req, res) => {
+    res.send("api running.....");
+})
 
 app.listen(3000, () => {
     console.log("App running on port 3000");
