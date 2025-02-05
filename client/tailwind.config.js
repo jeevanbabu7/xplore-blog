@@ -28,7 +28,7 @@ theme: {
     },
     animation: {
       'infinite-scroll': 'scroll 90s linear infinite',
-      "infinite-scroll-news": 'infinite-scroll 100s linear infinite',
+      "infinite-scroll-news": 'infinite-scroll 50s linear infinite',
       'background-position-spin': 'background-position-spin 3000ms infinite alternate',
       mesh: 'mesh 10s infinite ease-in-out',
       rainbow: 'rainbow var(--speed, 2s) infinite linear',
