@@ -22,9 +22,6 @@ function App() {
 
   }));
 
-  setInterval(() => {
-    location.reload();
-  }, 60000);
 
   useEffect(() => {
     const interval = setInterval(() => {

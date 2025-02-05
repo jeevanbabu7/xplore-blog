@@ -17,6 +17,19 @@ function TechCarousel() {
     fetchEvents();
   }, []);
 
+  setInterval(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await fetch("https://xplore-blog.onrender.com/api/blog/get");
+        const data = await response.json();
+        setEvents(data);
+      } catch (error) {
+        console.error("Error fetching events:", error);
+      }
+    };
+    fetchEvents();
+  },60000);
+
   return (
     <div className="relative overflow-hidden">
   <div className="flex w-max animate-infinite-scroll">
