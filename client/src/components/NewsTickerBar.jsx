@@ -33,7 +33,7 @@ function NewsTickerBar() {
   return (
     <div className="w-full py-5 bg-gradient-to-r from-orange-900/50 via-red-900/50 to-orange-900/50">
       <div className="relative overflow-hidden h-8 w-full">
-        <div className="flex w-max animate-infinite-scroll">
+        <div className="flex w-max animate-infinite-scroll-news">
           {[...news].map((item, index) => (
             <span key={index} className="px-8 text-yellow-300 text-lg font-bold whitespace-nowrap">
               {item.content}
