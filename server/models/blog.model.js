@@ -7,7 +7,7 @@ const techModel = mongoose.Schema({
     content: {
         type: String
     },
-    Image: {
+    image: {
         type: String
     }
 })

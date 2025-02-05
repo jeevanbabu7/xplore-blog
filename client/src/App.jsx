@@ -12,7 +12,7 @@ function App() {
     month: 'long',
     day: 'numeric'
   });
-
+  
   const [show, setShow] = useState(true);
 
   const [time, setTime] = useState(new Date().toLocaleTimeString());
@@ -21,6 +21,8 @@ function App() {
     const interval = setInterval(() => {
       setTime(new Date().toLocaleTimeString("en-US", {
         hour12: true,
+        hour: "2-digit",
+        minute: "2-digit"
 
       }));
     }, 1000);
