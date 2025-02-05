@@ -3,6 +3,7 @@ import { Button } from "./styles/button";
 import { Input } from "./styles/input";
 import { Textarea } from "./styles/textarea";
 import { Upload, AlertCircle, FileText, MessageSquare } from "lucide-react";
+import { createClient } from '@supabase/supabase-js';
 
 export default function EnhancedFormUI() {
   const [formType, setFormType] = useState("post");
@@ -11,14 +12,93 @@ export default function EnhancedFormUI() {
   const [image, setImage] = useState(null);
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleBlogSubmit = async () => {
+    const imgUrl = await uploadImage(image);
+    try {
+      const response = await fetch("https://xplore-blog.onrender.com/api/blog/insert", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title,
+          content,
+          image: imgUrl,
+        }),
+      })
+
+      const data = await response.json();
+      console.log(data);
+
+    }catch(err) {
+      console.log(err);
+      
+    }
+    
+  }
+
+  const handleMessageSubmit = async () => {
+    try {
+      const response = await fetch("https://xplore-blog.onrender.com/api/news/insert", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          content: message,
+        }),
+      });
+      
+      const data = await response.json();
+      console.log(data);
+      
+    }catch(err) {
+      console.log(err);
+      
+    }
+  }
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (formType === "post") {
-      console.log({ title, content, image });
-    } else {
-      console.log({ message });
+    if(formType === "post") {
+      handleBlogSubmit();
+    }else {
+      handleMessageSubmit();
     }
   };
+  
+
+
+// Initialize Supabase
+  const supabaseUrl = "https://qjwuustulpznqpjxygws.supabase.co";
+  const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
+  const supabase = createClient(supabaseUrl, supabaseKey);
+
+  // Upload function
+  async function uploadImage(image) {
+      const { data, error } = await supabase.storage
+          .from('images') // Replace with your bucket name
+          .upload(`uploads/${image.name}`, image, {
+              cacheControl: '3600',
+              upsert: true
+          });
+
+      if (error) {
+          console.error('Upload error:', error);
+          return null;
+      }
+
+      // Get Public URL
+      const { data: publicUrl } = supabase
+          .storage
+          .from('images')
+          .getPublicUrl(`uploads/${image.name}`);
+
+      console.log("Image URL:", publicUrl.publicUrl);
+      return publicUrl.publicUrl;
+  }
+
+
 
   const toggleFormType = () => {
     setFormType(formType === "post" ? "message" : "post");
