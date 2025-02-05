@@ -11,10 +11,12 @@ export default function EnhancedFormUI() {
   const [content, setContent] = useState("");
   const [image, setImage] = useState(null);
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleBlogSubmit = async () => {
     const imgUrl = await uploadImage(image);
     try {
+      setLoading(true);
       const response = await fetch("https://xplore-blog.onrender.com/api/blog/insert", {
         method: "POST",
         headers: {
@@ -29,7 +31,7 @@ export default function EnhancedFormUI() {
 
       const data = await response.json();
       console.log(data);
-
+      setLoading(false);
     }catch(err) {
       console.log(err);
       
@@ -39,6 +41,7 @@ export default function EnhancedFormUI() {
 
   const handleMessageSubmit = async () => {
     try {
+      setLoading(true);
       const response = await fetch("https://xplore-blog.onrender.com/api/news/insert", {
         method: "POST",
         headers: {
@@ -50,6 +53,7 @@ export default function EnhancedFormUI() {
       });
       
       const data = await response.json();
+      setLoading(false);
       console.log(data);
       
     }catch(err) {
@@ -154,9 +158,16 @@ export default function EnhancedFormUI() {
               </div>
             )}
 
-            <Button type="submit" className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-3 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-[1.02] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50">
+            {!loading ? (
+              <Button type="submit" className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-3 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-[1.02] focus:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50">
               {formType === "post" ? "Submit Post" : "Send Message"}
             </Button>
+            ):
+            (
+              <Button disabled className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold py-3 rounded-lg cursor-not-allowed transition-all duration-300 ease-in-out transform focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50">
+              Submitting...
+            </Button>
+            )}
           </form>
 
           <div className="mt-6 text-center">
