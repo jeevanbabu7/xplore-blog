@@ -36,7 +36,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen  text-white bg-black">
+    <div className="min-h-screen   text-white bg-black">
       {/* Top Bar */}
       <header className="bg-black/30 backdrop-blur-sm px-6 py-4 fixed w-full top-0 z-50 border-b border-orange-500/20 animate-border">
         <div className="max-w-7xl mx-auto flex items-center justify-between">

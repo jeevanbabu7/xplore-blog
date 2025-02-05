@@ -27,13 +27,18 @@ theme: {
       'top-only': '0 -4px 6px -1px rgba(100, 100, 100, 0.5)'
     },
     animation: {
-      'infinite-scroll': 'infinite-scroll 30s linear infinite',
+      'infinite-scroll': 'scroll 250s linear infinite',
+      "infinite-scroll-news": 'infinite-scroll 140s linear infinite',
       'background-position-spin': 'background-position-spin 3000ms infinite alternate',
       mesh: 'mesh 10s infinite ease-in-out',
       rainbow: 'rainbow var(--speed, 2s) infinite linear',
       pulse: 'pulse var(--duration) ease-out infinite'
     },
     keyframes: {
+      scroll: {
+        '0%': { transform: 'translateX(0)' },
+        '100%': { transform: 'translateX(-50%)' }, // Move left by half to loop smoothly
+      },
       'infinite-scroll': {
         from: {
           transform: 'translateX(0%)'
