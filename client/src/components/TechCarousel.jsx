@@ -8,179 +8,179 @@ function TechCarousel() {
   // Function to fetch events
   const fetchEvents = async () => {
     try {
-      // const response = await fetch("https://xplore-blog.onrender.com/api/blog/get");
-      // const data = await response.json();
+      const response = await fetch("https://xplore-blog-s02u.onrender.com/api/blog/get");
+      const data = await response.json();
 
 
-      const data =[{
-        "_id": {
-          "$oid": "67a57d86a16287a26a9cbf75"
-        },
-        "title": "",
-        "content": "",
-        "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/IMG-20250207-WA0002.webp",
-        "createdAt": {
-          "$date": "2025-02-07T03:27:02.452Z"
-        },
-        "updatedAt": {
-          "$date": "2025-02-07T03:27:02.452Z"
-        },
-        "__v": 0,
-        "contentType": "image"
-      },
-      {
-        "_id": {
-          "$oid": "67a57d90a16287a26a9cc31f"
-        },
-        "title": "",
-        "content": "",
-        "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/IMG-20250207-WA0004.webp",
-        "createdAt": {
-          "$date": "2025-02-07T03:27:12.953Z"
-        },
-        "updatedAt": {
-          "$date": "2025-02-07T03:27:12.953Z"
-        },
-        "__v": 0,
-        "contentType": "image"
-      },
-      {
-        "_id": {
-          "$oid": "67a57d9da16287a26a9cc7e1"
-        },
-        "title": "",
-        "content": "",
-        "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/IMG-20250207-WA0003.webp",
-        "createdAt": {
-          "$date": "2025-02-07T03:27:25.455Z"
-        },
-        "updatedAt": {
-          "$date": "2025-02-07T03:27:25.455Z"
-        },
-        "__v": 0,
-        "contentType": "image"
-      },
-      {
-        "_id": {
-          "$oid": "67a57da6a16287a26a9ccb39"
-        },
-        "title": "",
-        "content": "",
-        "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/IMG-20250207-WA0001.webp",
-        "createdAt": {
-          "$date": "2025-02-07T03:27:34.946Z"
-        },
-        "updatedAt": {
-          "$date": "2025-02-07T03:27:34.946Z"
-        },
-        "__v": 0,
-        "contentType": "image"
-      },
-      {
-        "_id": {
-          "$oid": "67a57f6ea16287a26a9d83c9"
-        },
-        "title": "Galactic Quest",
-        "content": "Venue: New library block CA04",
-        "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/Screenshot_20250207_090228_Video%20Player.jpg",
-        "createdAt": {
-          "$date": "2025-02-07T03:35:11.043Z"
-        },
-        "updatedAt": {
-          "$date": "2025-02-07T03:35:11.043Z"
-        },
-        "__v": 0,
-        "contentType": "image"
-      },
-      {
-        "_id": {
-          "$oid": "67a59933a16287a26aa4edee"
-        },
-        "title": "",
-        "content": "",
-        "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/grid%20posters.webp",
-        "createdAt": {
-          "$date": "2025-02-07T05:25:07.952Z"
-        },
-        "updatedAt": {
-          "$date": "2025-02-07T05:25:07.952Z"
-        },
-        "__v": 0,
-        "contentType": "image"
-      },
-      {
-        "_id": {
-          "$oid": "67a5a218055b8621b9abd103"
-        },
-        "title": "Line Follower Bot Competition happening now at Digital Library, Central Library Block",
-        "content": "",
-        "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/IMG20250207105446.jpg",
-        "contentType": "image",
-        "createdAt": {
-          "$date": "2025-02-07T06:03:05.011Z"
-        },
-        "updatedAt": {
-          "$date": "2025-02-07T06:03:05.011Z"
-        },
-        "__v": 0
-      },
-      {
-        "_id": {
-          "$oid": "67a5a7b4055b8621b9adcea9"
-        },
-        "title": "",
-        "content": "",
-        "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/WhatsApp%20Image%202025-02-07%20at%2011.41.47.jpeg",
-        "contentType": "image",
-        "createdAt": {
-          "$date": "2025-02-07T06:27:00.109Z"
-        },
-        "updatedAt": {
-          "$date": "2025-02-07T06:27:00.109Z"
-        },
-        "__v": 0
-      },
-      {
-        "_id": {
-          "$oid": "67a5b46e055b8621b9b1cd4c"
-        },
-        "title": "Neon football",
-        "content": "Happening now at Seminar Hall,New library Block",
-        "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/neonn.webp",
-        "contentType": "image",
-        "createdAt": {
-          "$date": "2025-02-07T07:21:18.805Z"
-        },
-        "updatedAt": {
-          "$date": "2025-02-07T07:21:18.805Z"
-        },
-        "__v": 0
-      },
-      {
-        "_id": {
-          "$oid": "67a5d0d1055b8621b9ba94c5"
-        },
-        "title": "",
-        "content": "",
-        "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/solderingwinners.webp",
-        "contentType": "image",
-        "createdAt": {
-          "$date": "2025-02-07T09:22:25.706Z"
-        },
-        "updatedAt": {
-          "$date": "2025-02-07T09:22:25.706Z"
-        },
-        "__v": 0
-      },
-      {
-        "_id": {
-          "$oid": "67a5d1771c55eac8024a7045"
-        },
-        "title": "",
-        "content": "",
-        "contentType": "video",
-        "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/1.mp4"
-      }]
+      // const data =[{
+      //   "_id": {
+      //     "$oid": "67a57d86a16287a26a9cbf75"
+      //   },
+      //   "title": "",
+      //   "content": "",
+      //   "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/IMG-20250207-WA0002.webp",
+      //   "createdAt": {
+      //     "$date": "2025-02-07T03:27:02.452Z"
+      //   },
+      //   "updatedAt": {
+      //     "$date": "2025-02-07T03:27:02.452Z"
+      //   },
+      //   "__v": 0,
+      //   "contentType": "image"
+      // },
+      // {
+      //   "_id": {
+      //     "$oid": "67a57d90a16287a26a9cc31f"
+      //   },
+      //   "title": "",
+      //   "content": "",
+      //   "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/IMG-20250207-WA0004.webp",
+      //   "createdAt": {
+      //     "$date": "2025-02-07T03:27:12.953Z"
+      //   },
+      //   "updatedAt": {
+      //     "$date": "2025-02-07T03:27:12.953Z"
+      //   },
+      //   "__v": 0,
+      //   "contentType": "image"
+      // },
+      // {
+      //   "_id": {
+      //     "$oid": "67a57d9da16287a26a9cc7e1"
+      //   },
+      //   "title": "",
+      //   "content": "",
+      //   "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/IMG-20250207-WA0003.webp",
+      //   "createdAt": {
+      //     "$date": "2025-02-07T03:27:25.455Z"
+      //   },
+      //   "updatedAt": {
+      //     "$date": "2025-02-07T03:27:25.455Z"
+      //   },
+      //   "__v": 0,
+      //   "contentType": "image"
+      // },
+      // {
+      //   "_id": {
+      //     "$oid": "67a57da6a16287a26a9ccb39"
+      //   },
+      //   "title": "",
+      //   "content": "",
+      //   "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/IMG-20250207-WA0001.webp",
+      //   "createdAt": {
+      //     "$date": "2025-02-07T03:27:34.946Z"
+      //   },
+      //   "updatedAt": {
+      //     "$date": "2025-02-07T03:27:34.946Z"
+      //   },
+      //   "__v": 0,
+      //   "contentType": "image"
+      // },
+      // {
+      //   "_id": {
+      //     "$oid": "67a57f6ea16287a26a9d83c9"
+      //   },
+      //   "title": "Galactic Quest",
+      //   "content": "Venue: New library block CA04",
+      //   "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/Screenshot_20250207_090228_Video%20Player.jpg",
+      //   "createdAt": {
+      //     "$date": "2025-02-07T03:35:11.043Z"
+      //   },
+      //   "updatedAt": {
+      //     "$date": "2025-02-07T03:35:11.043Z"
+      //   },
+      //   "__v": 0,
+      //   "contentType": "image"
+      // },
+      // {
+      //   "_id": {
+      //     "$oid": "67a59933a16287a26aa4edee"
+      //   },
+      //   "title": "",
+      //   "content": "",
+      //   "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/grid%20posters.webp",
+      //   "createdAt": {
+      //     "$date": "2025-02-07T05:25:07.952Z"
+      //   },
+      //   "updatedAt": {
+      //     "$date": "2025-02-07T05:25:07.952Z"
+      //   },
+      //   "__v": 0,
+      //   "contentType": "image"
+      // },
+      // {
+      //   "_id": {
+      //     "$oid": "67a5a218055b8621b9abd103"
+      //   },
+      //   "title": "Line Follower Bot Competition happening now at Digital Library, Central Library Block",
+      //   "content": "",
+      //   "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/IMG20250207105446.jpg",
+      //   "contentType": "image",
+      //   "createdAt": {
+      //     "$date": "2025-02-07T06:03:05.011Z"
+      //   },
+      //   "updatedAt": {
+      //     "$date": "2025-02-07T06:03:05.011Z"
+      //   },
+      //   "__v": 0
+      // },
+      // {
+      //   "_id": {
+      //     "$oid": "67a5a7b4055b8621b9adcea9"
+      //   },
+      //   "title": "",
+      //   "content": "",
+      //   "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/WhatsApp%20Image%202025-02-07%20at%2011.41.47.jpeg",
+      //   "contentType": "image",
+      //   "createdAt": {
+      //     "$date": "2025-02-07T06:27:00.109Z"
+      //   },
+      //   "updatedAt": {
+      //     "$date": "2025-02-07T06:27:00.109Z"
+      //   },
+      //   "__v": 0
+      // },
+      // {
+      //   "_id": {
+      //     "$oid": "67a5b46e055b8621b9b1cd4c"
+      //   },
+      //   "title": "Neon football",
+      //   "content": "Happening now at Seminar Hall,New library Block",
+      //   "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/neonn.webp",
+      //   "contentType": "image",
+      //   "createdAt": {
+      //     "$date": "2025-02-07T07:21:18.805Z"
+      //   },
+      //   "updatedAt": {
+      //     "$date": "2025-02-07T07:21:18.805Z"
+      //   },
+      //   "__v": 0
+      // },
+      // {
+      //   "_id": {
+      //     "$oid": "67a5d0d1055b8621b9ba94c5"
+      //   },
+      //   "title": "",
+      //   "content": "",
+      //   "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/solderingwinners.webp",
+      //   "contentType": "image",
+      //   "createdAt": {
+      //     "$date": "2025-02-07T09:22:25.706Z"
+      //   },
+      //   "updatedAt": {
+      //     "$date": "2025-02-07T09:22:25.706Z"
+      //   },
+      //   "__v": 0
+      // },
+      // {
+      //   "_id": {
+      //     "$oid": "67a5d1771c55eac8024a7045"
+      //   },
+      //   "title": "",
+      //   "content": "",
+      //   "contentType": "video",
+      //   "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/1.mp4"
+      // }]
       
       setEvents(data);
     } catch (error) {
