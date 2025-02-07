@@ -11,13 +11,6 @@ function TechCarousel() {
       const response = await fetch("https://xplore-blog.onrender.com/api/blog/get");
       const data = await response.json();
       setEvents([
-        
-        {
-          title: "Sample Video",
-          content: "This is a test video",
-          image: "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images/uploads/1.mp4",
-          contentType: "video",
-        },
         ...data,
       ]);
     } catch (error) {
