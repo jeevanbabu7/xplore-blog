@@ -27,7 +27,7 @@ theme: {
       'top-only': '0 -4px 6px -1px rgba(100, 100, 100, 0.5)'
     },
     animation: {
-      'infinite-scroll': 'scroll 90s linear infinite',
+      'infinite-scroll': 'scroll 150s linear infinite',
       "infinite-scroll-news": 'infinite-scroll 60s linear infinite',
       'background-position-spin': 'background-position-spin 3000ms infinite alternate',
       mesh: 'mesh 10s infinite ease-in-out',
