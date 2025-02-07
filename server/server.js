@@ -27,7 +27,7 @@ mongoose.connect(process.env.MONGO_URI, {
 app.post('/api/blog/insert', async (req, res) => {
     try {
         const { title, content, image } = req.body;
-        const newBlog = new Blog({ title, content, image });
+        const newBlog = new Blog({ title, content, image, contentType: "image" });
         const response = await newBlog.save();
         res.status(201).json(response);
     } catch (err) {

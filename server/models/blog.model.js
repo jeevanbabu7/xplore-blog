@@ -9,6 +9,9 @@ const blogSchema = new mongoose.Schema({
     },
     image: {
         type: String
+    },
+    contentType: {
+        type: String
     }
 }, { timestamps: true });
 
