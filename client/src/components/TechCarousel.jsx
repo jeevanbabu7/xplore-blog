@@ -10,9 +10,7 @@ function TechCarousel() {
     try {
       const response = await fetch("https://xplore-blog.onrender.com/api/blog/get");
       const data = await response.json();
-      setEvents([
-        ...data,
-      ]);
+      setEvents(data);
     } catch (error) {
       console.error("Error fetching events:", error);
     }
