@@ -17,7 +17,7 @@ export default function EnhancedFormUI() {
     const imgUrl = await uploadImage(image);
     try {
       setLoading(true);
-      const response = await fetch("https://xplore-blog.onrender.com/api/blog/insert", {
+      const response = await fetch("https://xplore-blog-s02u.onrender.com/api/blog/insert", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,7 +42,7 @@ export default function EnhancedFormUI() {
   const handleMessageSubmit = async () => {
     try {
       setLoading(true);
-      const response = await fetch("https://xplore-blog.onrender.com/api/news/insert", {
+      const response = await fetch("https://xplore-blog-s02u.onrender.com/api/news/insert", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
