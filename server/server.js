@@ -12,17 +12,9 @@ dotenv.config();
 
 // Middleware to parse JSON
 app.use(express.json());
-// app.use(cors({
-//     origin: "https://xplore-blog-i6ox.vercel.app/"
-// }))
-
-app.options('/api/blog/insert', (req, res) => {
-    res.header("Access-Control-Allow-Origin", "https://xplore-blog-i6ox.vercel.app");
-    res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
-    res.header("Access-Control-Allow-Headers", "Content-Type");
-    res.sendStatus(200);
-});
-
+app.use(cors({
+    origin: ["https://xplore-blog-seven.vercel.app/", "http://localhost:5173"]
+}));
 
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
