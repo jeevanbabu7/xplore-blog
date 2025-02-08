@@ -2,7 +2,61 @@ import React, { useEffect, useState, useRef } from "react";
 import "../index.css";
 
 function TechCarousel() {
-  const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState([
+  {
+    "_id": {
+      "$oid": "67a6e5f41c55eac8024a7053"
+    },
+    "title": "",
+    "content": "",
+    "contentType": "image",
+    "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images//Screenshot%202025-02-08%20095959.webp"
+  },
+  {
+    "_id": {
+      "$oid": "67a6e6271c55eac8024a7055"
+    },
+    "title": "",
+    "content": "",
+    "contentType": "image",
+    "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images//Screenshot%202025-02-08%20100132.webp"
+  },
+  {
+    "_id": {
+      "$oid": "67a6e64d1c55eac8024a7057"
+    },
+    "title": "",
+    "content": "",
+    "contentType": "image",
+    "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images//Screenshot%202025-02-08%20100153.webp"
+  },
+  {
+    "_id": {
+      "$oid": "67a6e66e1c55eac8024a7059"
+    },
+    "title": "",
+    "content": "",
+    "contentType": "image",
+    "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images//Screenshot%202025-02-08%20100205.webp"
+  },
+  {
+    "_id": {
+      "$oid": "67a6e6a21c55eac8024a705b"
+    },
+    "title": "",
+    "content": "",
+    "contentType": "image",
+    "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images//Screenshot%202025-02-08%20100233.webp"
+  },
+  {
+    "_id": {
+      "$oid": "67a6e6be1c55eac8024a705d"
+    },
+    "title": "",
+    "content": "",
+    "contentType": "image",
+    "image": "https://qjwuustulpznqpjxygws.supabase.co/storage/v1/object/public/images//Screenshot%202025-02-08%20100248.jpg"
+  }]);
   const videoRefs = useRef([]);
 
   // Function to fetch events
