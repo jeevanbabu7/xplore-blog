@@ -39,7 +39,8 @@ function App() {
   return (
     <div className="min-h-screen   text-white bg-black">
       {/* Top Bar */}
-      <header className="bg-black/30 backdrop-blur-sm px-6 py-4 fixed w-full top-0 z-50 border-b border-orange-500/20 animate-border">
+      {show ? (
+        <header className="bg-black/30 backdrop-blur-sm px-6 py-4 fixed w-full top-0 z-40 border-b border-orange-500/20 animate-border">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
@@ -66,11 +67,14 @@ function App() {
           </div>
         </div>
       </header>
+      ) : (
+        <></>
+      )}
 
       {/* Main Content */}
       <main className="pt-20">
         {/* Carousel Section */}
-        <section className="py-12">
+        <section className={`${!show ? "h-[80%]" : "py-12 "})`} >
           {show ? <TechCarousel /> : <Youtube url="https://www.youtube.com/embed/2DpP1GYOzBY?si=2lvcQZcs1_i6pIXx"/>}
         </section>
 
