@@ -7,7 +7,7 @@ const Youtube = ({ url }) => {
 
       <div className="relative w-full aspect-video">
         <iframe
-          src="https://player.twitch.tv/?channel=aatmikrobocek&parent=xplore-blog-seven.vercel.app/"
+          src="https://player.twitch.tv/?channel=aatmikrobocek&parent=xplore-blog-seven.vercel.app"
           frameBorder="0"
           allowFullScreen
           scrolling="no"
