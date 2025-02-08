@@ -13,7 +13,7 @@ dotenv.config();
 // Middleware to parse JSON
 app.use(express.json());
 app.use(cors({
-    origin: "*"
+    origin: "https://xplore-blog-i6ox.vercel.app/"
 }))
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
