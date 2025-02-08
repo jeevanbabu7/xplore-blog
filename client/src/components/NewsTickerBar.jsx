@@ -1,7 +1,68 @@
 import React, { useEffect, useState } from "react";
 
 function NewsTickerBar() {
-  const [news, setNews] = useState([]);
+  const [news, setNews] = useState([{
+    "_id": {
+      "$oid": "67a3e877978c37ee5636e70e"
+    },
+    "content": "Welcome to Xplore'24 ✨",
+    "createdAt": {
+      "$date": "2025-02-05T22:38:47.777Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-05T22:38:47.777Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67a3ee29978c37ee5636e73e"
+    },
+    "content": "📸 Capture the Moment! Share your Xplore24 experience using #Xplore24!",
+    "createdAt": {
+      "$date": "2025-02-05T23:03:05.616Z"
+    },
+    "updatedAt": {
+      "$date": "2025-02-05T23:03:05.616Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "67a6e85d1c55eac8024a7064"
+    },
+    "content": "Galactic Quest at CA 04, New library block"
+  },
+  {
+    "_id": {
+      "$oid": "67a6e8b31c55eac8024a7066"
+    },
+    "content": "📢 Debate competition: Venue -CS seminar hall, Spot registration started"
+  },
+  {
+    "_id": {
+      "$oid": "67a6e8d91c55eac8024a7068"
+    },
+    "content": "📢 Light music spot registration started near placement hall"
+  },
+  {
+    "_id": {
+      "$oid": "67a6e9311c55eac8024a706a"
+    },
+    "content": "Kalaripayattu will begin at 10:30 AM in the auditorium. ⚔️"
+  },
+  {
+    "_id": {
+      "$oid": "67a6e95a1c55eac8024a706c"
+    },
+    "content": "📢 AUTOQUIZ: Vacancies: 15 Teams Closing time : 1PM"
+  },
+  {
+    "_id": {
+      "$oid": "67a6e96f1c55eac8024a706e"
+    },
+    "content": "  Clue craze venue has changed to mb 124"
+  }]);
 
   useEffect(() => {
     const fetchEvents = async () => {
